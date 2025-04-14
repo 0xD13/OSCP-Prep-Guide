@@ -85,8 +85,148 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 ### Proving Grounds Play
 
-#### Linux Boxes
+#### Linux Boxe
+
+- [ ] [Amaterasu]()
+- [ ] [BBScute]()
+- [ ] [Blogger]()
+- [ ] [DC-9]()
+- [ ] [DriftingBlue6]()
 - [ ] [eLection]()
+- [ ] [FunboxEasyEnum]()
+- [ ] [Gaara]()
+- [ ] [InsanityHosting]()
+- [ ] [Loly]()
+- [ ] [Monitoring]()
+- [ ] [Potato]()
+- [ ] [Stapler]()
+
+### Proving Grounds Practice
+
+#### Linux Box
+
+- [ ] [Apex]()
+- [ ] [Astronaut]()
+- [ ] [BitForge]()
+- [ ] [Blackgate]()
+- [ ] [Boolean]()
+- [ ] [Bratarina]()
+- [ ] [Bullybox]()
+- [ ] [ClamAV]()
+- [ ] [Clue]()
+- [ ] [Cockpit]()
+- [ ] [Codo]()
+- [ ] [Crane]()
+- [ ] [Exfiltrated]()
+- [ ] [Extplorer]()
+- [ ] [Fanatastic]()
+- [ ] [Fired]()
+- [ ] [Flu]()
+- [ ] [Hawat]()
+- [ ] [Hetemit]()
+- [ ] [Hub]()
+- [ ] [Hunit]()
+- [ ] [Image]()
+- [ ] [Jordak]()
+- [ ] [Lavita]()
+- [ ] [law]()
+- [ ] [Levram]()
+- [ ] [Mantis]()
+- [ ] [Marketing]()
+- [ ] [Mzeeav]()
+- [ ] [Nibbles]()
+- [ ] [Nukem]()
+- [ ] [Ochima]()
+- [ ] [Payday]()
+- [ ] [PC]()
+- [ ] [Pebbles]()
+- [ ] [Pelican]()
+- [ ] [Peppo]()
+- [ ] [Plum]()
+- [ ] [Postfish]()
+- [ ] [Press]()
+- [ ] [PyLoader]()
+- [ ] [QuackerJack]()
+- [ ] [Readys]()
+- [ ] [Roquefort]()
+- [ ] [RubyDome]()
+- [ ] [Scrutiny]()
+- [ ] [Snookums]()
+- [ ] [Sorcerer]()
+- [ ] [SPX]()
+- [ ] [Sybaris]()
+- [ ] [Twiggy]()
+- [ ] [Vmdak]()
+- [ ] [Walla]()
+- [ ] [WallpaperHub]()
+- [ ] [Wombo]()
+- [ ] [Xposedapi]()
+- [ ] [Zab]()
+- [ ] [ZenPhoto]()
+- [ ] [Zipper]()
+
+#### Windows Box
+- [ ] [Algernon]()
+- [ ] [Authby]()
+- [ ] [Billyboss]()
+- [ ] [Craft]()
+- [ ] [DVR4]()
+- [ ] [Fish]()
+- [ ] [Helpdesk]()
+- [ ] [Hepet]()
+- [ ] [Hutch]()
+- [ ] [Internal]()
+- [ ] [Jacko]()
+- [ ] [Kevin]()
+- [ ] [MedJed]()
+- [ ] [Mice]()
+- [ ] [Monster]()
+- [ ] [Nickel]()
+- [ ] [Resourced]()
+- [ ] [Shenzi]()
+- [ ] [Slort]()
+- [ ] [Squid]()
+
+#### Windows Active Directory
+- [ ] [Access]()
+- [ ] [Heist]()
+- [ ] [Hokkaido]()
+- [ ] [Hutch]()
+- [ ] [Nagoya]()
+- [ ] [Resourced]()
+- [ ] [Vault]()
+
+#### Try Harder
+- [ ] [Nagoya [Windows]]()
+- [ ] [Osaka [Windows]]()
+- [ ] [ProStore [Linux]]()
+- [ ] [RPC1 [Linux]]()
+- [ ] [Symbolic [Windows]]()
+- [ ] [Upsploit [Linux]]()
+- [ ] [Validator [Linux]]()
+- [ ] [GLPI [Linux]]()
+- [ ] [Marshalled [Linux]]()
+- [ ] [Educated [Linux]]()
+- [ ] [Kyoto [Windows Buffer Overflow]]()
+- [ ] [Nara [Windows Active Directory]]()
+
+### Vlunlab
+
+#### Linux Box
+
+- [ ] [Bamboo]()
+- [ ] [Build]()
+- [ ] [Data]()
+- [ ] [Dump]()
+- [ ] [Feedback]()
+- [ ] [Forgotten]()
+- [ ] [Sync]()
+
+#### Windows Box
+
+#### Windows Active Directory
+
+#### Try Harder
 
 
 ## Reference
