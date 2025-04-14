@@ -1,26 +1,45 @@
 # OSCP-Prep-Guide
 A collection of labs, tools, and study materials for OSCP exam preparation. Includes practice environments, scripts, and resources for enumeration, exploitation, and privilege escalation to help master penetration testing skills.
 
+## Tool
+- [GTFOBins](https://gtfobins.github.io/): list of Unix binaries which can escalate privileges
+- [Linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS): search for possible paths to escalate privileges on Linux
+- [Penelope](https://github.com/brightio/penelope): reverse shell
+
+
+
 ## Walkthrough Labs
 
 ### TryHackMe
 
+#### Web attack and SQL injection
 - [X] [Walking An Application](https://tryhackme.com/room/walkinganapplication)
 - [X] [Web Enumeration](https://tryhackme.com/room/webenumerationv2)
 - [X] [SQL Injection](https://tryhackme.com/room/sqlinjectionlm)
-- [ ] [SQL Injection Lab](https://tryhackme.com/room/sqlilab)
+- [X] [SQL Injection Lab](https://tryhackme.com/room/sqlilab)
 - [X] [Authentication Bypass](https://tryhackme.com/jr/authenticationbypass)
 - [X] [IDOR](https://tryhackme.com/jr/idor)
-- [ ] [SSRF](https://tryhackme.com/jr/ssrfqi)
-- [ ] [File Inclusion](https://tryhackme.com/room/fileinc)
-- [ ] [Cross-Site Scripting ](https://tryhackme.com/room/xss)
-- [ ] [Command Injection](https://tryhackme.com/room/oscommandinjection)
-- [ ] [Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
-- [ ] [Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
-- [ ] [Linux: Local Enumeration](https://tryhackme.com/room/lle)
+- [X] [SSRF](https://tryhackme.com/jr/ssrfqi)
+- [X] [File Inclusion](https://tryhackme.com/room/fileinc)
+- [X] [Cross-Site Scripting ](https://tryhackme.com/room/xss)
+- [X] [Command Injection](https://tryhackme.com/room/oscommandinjection)
+- [X] [Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
+- [X] [Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
+
+#### Linux Privilege Escalation
+- [X] [Linux: Local Enumeration](https://tryhackme.com/room/lle)
 - [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
 - [ ] [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
 - [ ] [Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
+- [ ] [Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
+- [ ] [Common Linux Privesc
+](https://tryhackme.com/room/commonlinuxprivesc)
+- [ ] [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc)
+- [ ] [Vulnversity](https://tryhackme.com/room/vulnversity)
+- [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
+- [ ] [Bolt](https://tryhackme.com/room/bolt)
+
+#### Windows Privilege Escalation
 - [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
 - [ ] [Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
 - [ ] [Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
@@ -29,6 +48,8 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [ ] [Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
 - [ ] [Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
 - [ ] [Wreath](https://tryhackme.com/room/wreath)
+
+#### Windows Active Directory Attack
 - [ ] [Active Directory Basics](https://tryhackme.com/room/winadbasics)
 - [ ] [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 - [ ] [Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
@@ -85,7 +106,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 ### Proving Grounds Play
 
-#### Linux Boxe
+#### Linux Box
 
 - [ ] [Amaterasu]()
 - [ ] [BBScute]()
@@ -228,8 +249,64 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 #### Try Harder
 
+## Cheat Sheet
+
+### Linux Command
+Check user's sudo permissions
+```shell
+sudo -l
+```
+Find the file
+```shell
+find / -iname "flag.txt" 2>/dev/null
+```
+Find all SUID file
+```shell
+find / -perm -u=s -type f 2>/dev/null
+```
+
+
+### SQL injection
+
+#### Database info discovery
+Version
+```shell
+# Microsoft or MySQL
+@@version 
+# PostgreSQL
+version()
+# SQLite
+sqlite_version()
+```
+
+Show Tables
+``` sql
+-- SQLite
+SELECT name FROM sqlite_master WHERE type = "table"
+```
+#### UNION attacks
+Example
+```sql
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2
+```
+Determining the number of columns required
+```
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+etc. 
+```
+Finding columns with a useful data type
+```
+' UNION SELECT 'a',NULL,NULL,NULL--
+' UNION SELECT NULL,'a',NULL,NULL--
+' UNION SELECT NULL,NULL,'a',NULL--
+' UNION SELECT NULL,NULL,NULL,'a'--
+```
 
 ## Reference
 - https://github.com/rodolfomarianocy/OSCP-Tricks-2023
 - https://docs.google.com/spreadsheets/d/18weuz_Eeynr6sXFQ87Cd5F0slOj9Z6rt
 - https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8
+- https://portswigger.net/
+- https://tryhackme.com/
