@@ -4,6 +4,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 ## Tool
 - [GTFOBins](https://gtfobins.github.io/): list of Unix binaries which can escalate privileges
 - [Linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS): search for possible paths to escalate privileges on Linux
+- [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS): search for possible paths to escalate privileges on Windows
 - [Penelope](https://github.com/brightio/penelope): reverse shell
 
 
@@ -38,6 +39,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [ ] [Vulnversity](https://tryhackme.com/room/vulnversity)
 - [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
 - [ ] [Bolt](https://tryhackme.com/room/bolt)
+- [ ] [](https://tryhackme.com/room/tartaraus)
 
 #### Windows Privilege Escalation
 - [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
