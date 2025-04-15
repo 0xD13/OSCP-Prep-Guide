@@ -29,7 +29,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 #### Linux Privilege Escalation
 - [X] [Linux: Local Enumeration](https://tryhackme.com/room/lle)
-- [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
+- [X] [Enumeration](https://tryhackme.com/room/enumerationpe)
 - [ ] [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
 - [ ] [Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
 - [ ] [Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
