@@ -14,32 +14,30 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 ### TryHackMe
 
 #### Web attack and SQL injection
-- [X] [Walking An Application](https://tryhackme.com/room/walkinganapplication)
-- [X] [Web Enumeration](https://tryhackme.com/room/webenumerationv2)
-- [X] [SQL Injection](https://tryhackme.com/room/sqlinjectionlm)
-- [X] [SQL Injection Lab](https://tryhackme.com/room/sqlilab)
-- [X] [Authentication Bypass](https://tryhackme.com/jr/authenticationbypass)
-- [X] [IDOR](https://tryhackme.com/jr/idor)
-- [X] [SSRF](https://tryhackme.com/jr/ssrfqi)
-- [X] [File Inclusion](https://tryhackme.com/room/fileinc)
-- [X] [Cross-Site Scripting ](https://tryhackme.com/room/xss)
-- [X] [Command Injection](https://tryhackme.com/room/oscommandinjection)
-- [X] [Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
-- [X] [Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
+- [X] [[Easy] Walking An Application](https://tryhackme.com/room/walkinganapplication)
+- [X] [[Easy] Web Enumeration](https://tryhackme.com/room/webenumerationv2)
+- [X] [[Medium] SQL Injection](https://tryhackme.com/room/sqlinjectionlm)
+- [X] [[Easy] SQL Injection Lab](https://tryhackme.com/room/sqlilab)
+- [X] [[Easy] Authentication Bypass](https://tryhackme.com/jr/authenticationbypass)
+- [X] [[Easy] IDOR](https://tryhackme.com/jr/idor)
+- [X] [[Easy] SSRF](https://tryhackme.com/jr/ssrfqi)
+- [X] [[Medium] File Inclusion](https://tryhackme.com/room/fileinc)
+- [X] [[Easy] Intro to Cross-site Scripting](https://tryhackme.com/room/xss)
+- [X] [[Easy] Command Injection](https://tryhackme.com/room/oscommandinjection)
+- [X] [[Easy] Upload Vulnerabilities](https://tryhackme.com/jr/uploadvulns)
+- [X] [[Info] Bypass Disable Functions](https://tryhackme.com/room/bypassdisablefunctions)
 
 #### Linux Privilege Escalation
-- [X] [Linux: Local Enumeration](https://tryhackme.com/room/lle)
-- [X] [Enumeration](https://tryhackme.com/room/enumerationpe)
-- [ ] [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
-- [ ] [Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
-- [ ] [Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
-- [ ] [Common Linux Privesc
+- [X] [[Easy] Linux: Local Enumeration](https://tryhackme.com/room/lle)
+- [X] [[Easy] Enumeration](https://tryhackme.com/room/enumerationpe)
+- [X] [[Medium] Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
+- [X] [[Medium] Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
+- [X] [[Info] Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
+- [X] [[Easy] Common Linux Privesc
 ](https://tryhackme.com/room/commonlinuxprivesc)
-- [ ] [Linux PrivEsc](https://tryhackme.com/room/linuxprivesc)
 - [ ] [Vulnversity](https://tryhackme.com/room/vulnversity)
 - [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
 - [ ] [Bolt](https://tryhackme.com/room/bolt)
-- [ ] [](https://tryhackme.com/room/tartaraus)
 
 #### Windows Privilege Escalation
 - [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
@@ -266,7 +264,10 @@ Find all SUID file
 ```shell
 find / -perm -u=s -type f 2>/dev/null
 ```
-
+Find all the SUID/SGID executables
+```bash
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+```
 
 ### SQL injection
 
