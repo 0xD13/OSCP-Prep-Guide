@@ -2,12 +2,22 @@
 A collection of labs, tools, and study materials for OSCP exam preparation. Includes practice environments, scripts, and resources for enumeration, exploitation, and privilege escalation to help master penetration testing skills.
 
 ## Tool
+
+### Enumeration
+
+- [enum4linux](https://www.kali.org/tools/enum4linux/): a tool for enumerating information from Windows and Samba systems
+
+### Privilege Escalation
+
 - [GTFOBins](https://gtfobins.github.io/): list of Unix binaries which can escalate privileges
 - [Linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS): search for possible paths to escalate privileges on Linux
 - [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS): search for possible paths to escalate privileges on Windows
 - [Penelope](https://github.com/brightio/penelope): reverse shell
 
+### Password Crack
 
+- [Hydra](https://www.kali.org/tools/hydra/): Hydra is a parallelized login cracker which supports numerous protocols to attack
+- [john the ripper](https://www.openwall.com/john/): John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
 
 ## Walkthrough Labs
 
@@ -35,8 +45,8 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [X] [[Info] Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
 - [X] [[Easy] Common Linux Privesc
 ](https://tryhackme.com/room/commonlinuxprivesc)
-- [ ] [Vulnversity](https://tryhackme.com/room/vulnversity)
-- [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
+- [X] [[Easy] Vulnversity](https://tryhackme.com/room/vulnversity)
+- [X] [[Easy] Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
 - [ ] [Bolt](https://tryhackme.com/room/bolt)
 
 #### Windows Privilege Escalation
@@ -268,6 +278,14 @@ Find all the SUID/SGID executables
 ```bash
 find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
 ```
+### Nmap
+
+Enumerate the users on a remote Windows system
+```
+nmap --script smb-enum-users.nse -p445 <host>
+sudo nmap -sU -sS --script smb-enum-users.nse -p U:137,T:139 <host>
+```
+
 
 ### SQL injection
 
@@ -306,6 +324,15 @@ Finding columns with a useful data type
 ' UNION SELECT NULL,NULL,'a',NULL--
 ' UNION SELECT NULL,NULL,NULL,'a'--
 ```
+
+### Password Cracker
+
+#### .ssh
+The keys need to be read-writable only by you:
+```
+chmod 600 ~/.ssh/id_rsa
+```
+
 
 ## Reference
 - https://github.com/rodolfomarianocy/OSCP-Tricks-2023
