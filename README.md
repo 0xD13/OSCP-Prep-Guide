@@ -54,8 +54,8 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [X] [[Easy] Bolt](https://tryhackme.com/room/bolt)
 
 #### Windows Privilege Escalation
-- [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
-- [ ] [Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
+- [X] [[Easy] Enumeration](https://tryhackme.com/room/enumerationpe)
+- [ ] [[Medium] Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
 - [ ] [Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
 - [ ] [Vulnerabilities 101](https://tryhackme.com/jr/vulnerabilities101)
 - [ ] [Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
