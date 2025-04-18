@@ -19,6 +19,10 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [Hydra](https://www.kali.org/tools/hydra/): Hydra is a parallelized login cracker which supports numerous protocols to attack
 - [john the ripper](https://www.openwall.com/john/): John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
 
+### Vulnerability Exploit
+
+- [Metasploit](https://github.com/rapid7/metasploit-framework)
+
 ## Walkthrough Labs
 
 ### TryHackMe
@@ -47,7 +51,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 ](https://tryhackme.com/room/commonlinuxprivesc)
 - [X] [[Easy] Vulnversity](https://tryhackme.com/room/vulnversity)
 - [X] [[Easy] Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
-- [ ] [Bolt](https://tryhackme.com/room/bolt)
+- [X] [[Easy] Bolt](https://tryhackme.com/room/bolt)
 
 #### Windows Privilege Escalation
 - [ ] [Enumeration](https://tryhackme.com/room/enumerationpe)
