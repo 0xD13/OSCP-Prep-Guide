@@ -33,7 +33,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [X] [[Medium] Linux PrivEsc](https://tryhackme.com/room/linuxprivesc) 
 - [X] [[Medium] Linux Privilege Escalation](https://tryhackme.com/room/linprivesc)
 - [X] [[Info] Sudo Security Bypass](https://tryhackme.com/room/sudovulnsbypass)
-- [X] [[Easy] Common Linux Privesc
+- [ ] [[Easy] Common Linux Privesc
 ](https://tryhackme.com/room/commonlinuxprivesc)
 - [ ] [Vulnversity](https://tryhackme.com/room/vulnversity)
 - [ ] [Basic Pentesting](https://tryhackme.com/room/basicpentestingjt)
