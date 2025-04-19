@@ -16,6 +16,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 ### Password Crack
 
+- [pth-toolkit](https://github.com/byt3bl33d3r/pth-toolkit/): A modified version of the passing-the-hash tool collection
 - [Hydra](https://www.kali.org/tools/hydra/): Hydra is a parallelized login cracker which supports numerous protocols to attack
 - [john the ripper](https://www.openwall.com/john/): John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
 
@@ -55,12 +56,12 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 
 #### Windows Privilege Escalation
 - [X] [[Easy] Enumeration](https://tryhackme.com/room/enumerationpe)
-- [ ] [[Medium] Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
-- [ ] [Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
-- [ ] [Vulnerabilities 101](https://tryhackme.com/jr/vulnerabilities101)
-- [ ] [Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
-- [ ] [Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
-- [ ] [Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
+- [X] [[Medium] Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
+- [X] [[Medium]Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
+- [X] [[Easy] Vulnerabilities 101](https://tryhackme.com/jr/vulnerabilities101)
+- [X] [[Easy] Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
+- [X] [[Easy] Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
+- [X] [[Easy] Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
 - [ ] [Wreath](https://tryhackme.com/room/wreath)
 
 #### Windows Active Directory Attack
@@ -337,6 +338,10 @@ The keys need to be read-writable only by you:
 chmod 600 ~/.ssh/id_rsa
 ```
 
+#### pth-winexe
+```
+pth-winexe -U 'admin%password123' //10.10.119.24 cmd.exe
+```
 
 ## Reference
 - https://github.com/rodolfomarianocy/OSCP-Tricks-2023
