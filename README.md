@@ -62,7 +62,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [X] [[Easy] Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
 - [X] [[Easy] Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
 - [X] [[Easy] Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
-- [ ] [Wreath](https://tryhackme.com/room/wreath)
+- [ ] [[Easy] Wreath](https://tryhackme.com/room/wreath)
 
 #### Windows Active Directory Attack
 - [ ] [Active Directory Basics](https://tryhackme.com/room/winadbasics)
