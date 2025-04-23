@@ -71,6 +71,11 @@ sudo nmap -sU -sS --script smb-enum-users.nse -p U:137,T:139 <host>
 #### [enum4linux](https://www.kali.org/tools/enum4linux/)
 a tool for enumerating information from Windows and Samba systems
 
+#### [smbclient](https://www.samba.org/samba/docs/4.17/man-html/smbclient.1.html)
+```shell
+smbclient -L DOMAIN --user USER
+```
+
 ### Gaining Access
 
 #### [GTFOBins](https://gtfobins.github.io/)
@@ -116,6 +121,10 @@ evil-winrm -u Administrator -H ADMIN_HASH -i IP
 Hydra is a parallelized login cracker which supports numerous protocols to attack
 #### [john the ripper](https://www.openwall.com/john/)
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
+#### [hashcat](https://hashcat.net/hashcat/)
+```
+hashcat -m 18200 hash.txt passwordlist.txt --force
+```
 
 ### Other
 
@@ -124,6 +133,33 @@ The keys need to be read-writable only by you:
 ```
 chmod 600 ~/.ssh/id_rsa
 ```
+
+#### [Kerbrute](https://github.com/ropnop/kerbrute)
+A tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication
+
+User Enumeration
+```shell
+./kerbrute_linux_amd64 userenum -d lab.ropnop.com usernames.txt
+```
+
+Password Spray
+```shell
+./kerbrute_linux_amd64 passwordspray -d lab.ropnop.com domain_users.txt Password123
+```
+
+#### [impacket](https://github.com/fortra/impacket)
+Impacket is a collection of Python classes for working with network protocols.
+
+Retrieving Kerberos Tickets
+```shell
+impacket-getNPUsers DOMAIN/USERNAME
+```
+Dump the hashes
+```shell
+impacket-secretsdump DOMAIN/USERNAME:PASSWORD@IP
+```
+#### [WADComs](https://wadcoms.github.io/#)
+WADComs is an interactive cheat sheet, containing a curated list of offensive security tools and their respective commands, to be used against Windows/AD environments.
 
 ## Walkthrough Labs
 
@@ -158,7 +194,7 @@ chmod 600 ~/.ssh/id_rsa
 #### Windows Privilege Escalation
 - [X] [[Easy] Enumeration](https://tryhackme.com/room/enumerationpe)
 - [X] [[Medium] Windows PrivEsc](https://tryhackme.com/room/windows10privesc)
-- [X] [[Medium]Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
+- [X] [[Medium] Windows PrviEsc Arena](https://tryhackme.com/room/windowsprivesc20)
 - [X] [[Easy] Vulnerabilities 101](https://tryhackme.com/jr/vulnerabilities101)
 - [X] [[Easy] Exploit Vulnerabilities](https://tryhackme.com/jr/exploitingavulnerabilityv2)
 - [X] [[Easy] Vulnerability Capstone](https://tryhackme.com/jr/vulnerabilitycapstone)
@@ -166,8 +202,8 @@ chmod 600 ~/.ssh/id_rsa
 - [X] [[Easy] Wreath](https://tryhackme.com/room/wreath)
 
 #### Windows Active Directory Attack
-- [ ] [Active Directory Basics](https://tryhackme.com/room/winadbasics)
-- [ ] [Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
+- [X] [[Easy] Active Directory Basics](https://tryhackme.com/room/winadbasics)
+- [X] [⭐️ [Medium] Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
 - [ ] [Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
 - [ ] [Breaching Active Directory](https://tryhackme.com/room/breachingad)
 - [ ] [AD Enumeration](https://tryhackme.com/room/adenumeration)
