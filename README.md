@@ -311,7 +311,7 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [ ] [Plum]()
 - [ ] [Postfish]()
 - [ ] [Press]()
-- [ ] [PyLoader]()
+- [X] [Easy] pyLoader ([writeup](/writeups/pyLoader.md))
 - [ ] [QuackerJack]()
 - [ ] [Readys]()
 - [ ] [Roquefort]()
