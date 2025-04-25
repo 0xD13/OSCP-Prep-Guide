@@ -62,7 +62,9 @@ Log in using common account passwords `admin/admin`
 
 Check the service version
 ![](./screenshot/Screenshot%202025-04-24%20at%2018.16.18.png)
+
 The service version is **Gerapy v0.9.7**
+
 Search exploits
 ```
 ┌──(kali㉿kali)-[~/Desktop/PG/Levram]
