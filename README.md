@@ -281,7 +281,7 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [ ] [ClamAV]()
 - [ ] [Clue]()
 - [ ] [Cockpit]()
-- [ ] [Codo]()
+- [X] [Easy] Codo ([writeup](/writeups/Codo.md))
 - [ ] [Crane]()
 - [ ] [Exfiltrated]()
 - [ ] [Extplorer]()
