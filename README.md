@@ -290,7 +290,7 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [ ] [Flu]()
 - [ ] [Hawat]()
 - [ ] [Hetemit]()
-- [ ] [Hub]()
+- [X] [Easy] Hub ([writeup](/writeups/Hub.md))
 - [ ] [Hunit]()
 - [ ] [Image]()
 - [ ] [Jordak]()
