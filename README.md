@@ -293,13 +293,13 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [X] [Easy] Hub ([writeup](/writeups/Hub.md))
 - [ ] [Hunit]()
 - [ ] [Image]()
-- [ ] [Jordak]()
+- [X] [Easy] Jordak
 - [ ] [Lavita]()
 - [ ] [law]()
 - [X] [Easy] Levram ([writeup](/writeups/Levram.md))
 - [ ] [Mantis]()
 - [ ] [Marketing]()
-- [ ] [Mzeeav]()
+- [X] [Intermediate] Mzeeav
 - [ ] [Nibbles]()
 - [ ] [Nukem]()
 - [ ] [Ochima]()
