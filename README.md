@@ -285,7 +285,7 @@ git-dumper http://bullybox.local/.git .
 - [ ] [Boolean]()
 - [ ] [Bratarina]()
 - [X] [Bullybox]()
-- [ ] [ClamAV]()
+- [X] [ClamAV]()
 - [ ] [Clue]()
 - [ ] [Cockpit]()
 - [X] [Easy] Codo ([writeup](/writeups/Codo.md))
