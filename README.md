@@ -154,6 +154,13 @@ python3 GetUserSPNs.py DOMAIN/USERNAME:PASSWORD -dc-ip IP -request
 #### [WADComs](https://wadcoms.github.io/#)
 WADComs is an interactive cheat sheet, containing a curated list of offensive security tools and their respective commands, to be used against Windows/AD environments.
 
+#### [git-dumper](https://github.com/arthaud/git-dumper)
+A tool to dump a git repository from a website.
+```
+git-dumper http://bullybox.local/.git .
+```
+
+
 ## Walkthrough Labs
 
 ### TryHackMe
@@ -272,12 +279,12 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 #### Linux Box
 
 - [ ] [Apex]()
-- [ ] [Astronaut]()
+- [X] [Astronaut]()
 - [ ] [BitForge]()
 - [ ] [Blackgate]()
 - [ ] [Boolean]()
 - [ ] [Bratarina]()
-- [ ] [Bullybox]()
+- [X] [Bullybox]()
 - [ ] [ClamAV]()
 - [ ] [Clue]()
 - [ ] [Cockpit]()
@@ -312,7 +319,7 @@ WADComs is an interactive cheat sheet, containing a curated list of offensive se
 - [ ] [Postfish]()
 - [ ] [Press]()
 - [X] [Easy] pyLoader ([writeup](/writeups/pyLoader.md))
-- [ ] [QuackerJack]()
+- [X] [Intermediate] QuackerJack ([writeup](/writeups/QuackerJack.md))
 - [ ] [Readys]()
 - [ ] [Roquefort]()
 - [ ] [RubyDome]()
