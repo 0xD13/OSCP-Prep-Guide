@@ -324,7 +324,7 @@ wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USER
 - [ ] [InsanityHosting]()
 - [X] [Loly]()
 - [ ] [Monitoring]()
-- [ ] [Potato]()
+- [X] [Potato]()
 - [ ] [Stapler]()
 
 ### Proving Grounds Practice
