@@ -332,7 +332,8 @@ wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USER
 #### Linux Box
 | Lab | Recon | Access | Privilege Escalation |
 |--|--|--|----|
-|[] Apex||| 
+|Snookums|NMAP| [SimplePHPGal 0.7 - Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| [Pwnkit](https://github.com/ly4k/PwnKit)|
+
 - [ ] [Apex]()
 - [X] [Astronaut]()
 - [ ] [BitForge]()
