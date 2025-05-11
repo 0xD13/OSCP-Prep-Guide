@@ -330,7 +330,9 @@ wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USER
 ### Proving Grounds Practice
 
 #### Linux Box
-
+| Lab | Recon | Access | Privilege Escalation |
+|--|--|--|----|
+|[] Apex||| 
 - [ ] [Apex]()
 - [X] [Astronaut]()
 - [ ] [BitForge]()
@@ -377,7 +379,8 @@ wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USER
 - [ ] [Roquefort]()
 - [X] [RubyDome]()
 - [ ] [Scrutiny]()
-- [ ] [Snookums]()
+- [X] Snookums
+  - NMAP -> [SimplePHPGal 0.7 - Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py) -> [Pwnkit](https://github.com/ly4k/PwnKit)
 - [ ] [Sorcerer]()
 - [ ] [SPX]()
 - [ ] [Sybaris]()
