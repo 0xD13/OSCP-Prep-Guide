@@ -346,7 +346,7 @@ The most commonly used tools
 |Snookums||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
 |Sorcerer|DirBuster| SSH, SCP | start-stop-daemon (SUID) 
 |Twiggy|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
-|Walla|default creds|[RaspAP 2.5 rce - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|
+|Walla|default creds|[RaspAP 2.5 rce - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
 
 
 - [ ] [Apex]()
@@ -398,7 +398,7 @@ The most commonly used tools
 - [ ] [SPX]()
 - [ ] [Sybaris]()
 - [ ] [Vmdak]()
-- [ ] [Walla]()
+
 - [ ] [WallpaperHub]()
 - [ ] [Wombo]()
 - [ ] [Xposedapi]()
