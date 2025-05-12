@@ -88,6 +88,11 @@ a tool for enumerating information from Windows and Samba systems
 smbclient -L DOMAIN --user USER
 ```
 
+#### [Nikto](https://github.com/sullo/nikto)
+```
+nitko -h IP
+```
+
 ### Gaining Access
 
 #### [GTFOBins](https://gtfobins.github.io/)
@@ -338,8 +343,11 @@ The most commonly used tools
 
 | Lab | Recon | Access | Privilege Escalation |
 |--|--|--|--|
-|Snookums|| [Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
+|Snookums||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
 |Sorcerer|DirBuster| SSH, SCP | start-stop-daemon (SUID) 
+|Twiggy|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
+|Walla|default creds|[RaspAP 2.5 rce - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|
+
 
 - [ ] [Apex]()
 - [X] [Astronaut]()
@@ -389,7 +397,6 @@ The most commonly used tools
 - [ ] [Scrutiny]()
 - [ ] [SPX]()
 - [ ] [Sybaris]()
-- [ ] [Twiggy]()
 - [ ] [Vmdak]()
 - [ ] [Walla]()
 - [ ] [WallpaperHub]()
