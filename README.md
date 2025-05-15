@@ -341,23 +341,22 @@ The most commonly used tools
 - linPEAS
 - GTFOBins
 
-| Lab | Difficulty | Recon | Access | Privilege Escalation |
-|--|--|--|--|--|
-|Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)||
-|Bratarina|Easy|OpenSMTPD|[OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)|
-|Snookums|Intermediate||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
-|Sorcerer|Intermediate|Dirsearch| SSH, SCP | start-stop-daemon (SUID) 
-|Twiggy|Intermediate|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
-|Walla|Intermediate|default creds|[RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
-|Wombo|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)|
-|ZenPhoto|Intermediate|Dirsearch|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
+| Lab       | Difficulty   | Recon                                                          | Access                                                                                                                         | Privilege Escalation                                                                                   |
+| --------- | ------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| Astronaut | Easy         |                                                                | [GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)           | PHP (SUID)                                                                                             |
+| Blackgate | Intermediate | Redis                                                          | [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) |                                                                                                        |
+| Bratarina | Easy         | OpenSMTPD                                                      | [OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)                                           |                                                                                                        |
+| Bullybox  | Intermediate | [git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)                                | `sudo`                                                                                                 |
+| Snookums  | Intermediate |                                                                | [Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)                                                  | PwnKit                                                                                                 |
+| Sorcerer  | Intermediate | Dirsearch                                                      | SSH, SCP                                                                                                                       | start-stop-daemon (SUID)                                                                               |
+| Twiggy    | Intermediate | ZeroMQ ZMTP 2.0                                                | [Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)                                   |                                                                                                        |
+| Walla     | Intermediate | default creds                                                  | [RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)                                               | `sudo -l`, replace python file                                                                         |
+| Wombo     | Intermediate | Redis                                                          | [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) |                                                                                                        |
+| ZenPhoto  | Intermediate | Dirsearch                                                      | [ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)                                              | [rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904) |
 
 - [ ] [Apex]()
-- [X] [Astronaut]()
 - [ ] [BitForge]()
-
 - [ ] [Boolean]()
-- [X] [Bullybox]()
 - [X] [ClamAV]()
 - [ ] [Clue]()
 - [x] [Cockpit]()
