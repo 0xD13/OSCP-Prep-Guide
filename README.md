@@ -344,14 +344,14 @@ The most commonly used tools
 - linPEAS
 - GTFOBins
 
-| Lab       | Difficulty   | Recon| Access| Privilege Escalation|
-| --------- | ------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| Astronaut | Easy|| [GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)           | `PHP`(SUID)|
-| Blackgate | Intermediate | Redis| [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
-| Bratarina | Easy| OpenSMTPD| [OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)||
-| Bullybox  | Intermediate | [git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)| `sudo`|
+| Lab| Difficulty| Recon| Access| Privilege Escalation|
+| -- | -- | -- | -- | -- |
+|Astronaut|Easy||[GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)| `PHP`(SUID)|
+|Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
+|Bratarina|Easy| OpenSMTPD|[OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)||
+|Bullybox|Intermediate|[git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)|`sudo`|
 |ClamAV|Easy||[Sendmail with clamav-milter < 0.91.2 - Remote Command Execution](https://www.exploit-db.com/exploits/4761)
-|Cockpit|Intermediate|SQL Injection||`tar` (SUID), edit `etc/sudoers`|
+|Cockpit|Intermediate||SQL Injection|`tar` (SUID), edit `etc/sudoers`|
 |Codo|Easy||upload reverse shell|root's password leaked (linPEAS)|
 |Crane|Easy||[CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940?tab=readme-ov-file)|`sudo -l`, serice|
 |Exfiltrated|Easy|default creds|[CVE-2018-19422-SubrionCMS-RCE](https://github.com/hev0x/CVE-2018-19422-SubrionCMS-RCE)|cron jobs, [Exploit for CVE-2021-22204 (ExifTool) - Arbitrary Code Execution](https://github.com/UNICORDev/exploit-CVE-2021-22204)|
@@ -359,16 +359,18 @@ The most commonly used tools
 |Flu|Intermediate||[ CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
 |Hawat|Hard|dirsearsh|Sql injection, upload shell|
 |Hub|Easy||[FuguHub 8.4 Authenticated RCE](https://github.com/SanjinDedic/FuguHub-8.4-Authenticated-RCE-CVE-2024-27697)|
-|Image|Easy||[RCE vulnerability affecting ImageMagick 6.9.6-4 - CVE-2023-34152](https://github.com/SudoIndividual/CVE-2023-34152)| `strace` (SUID)|
+|Image|Easy||[RCE vulnerability affecting ImageMagick 6.9.6-4 - CVE-2023-34152](https://github.com/SudoIndividual/CVE-2023-34152)|`strace` (SUID)|
 |Jordak|Easy||[CVE-2023-26469](https://github.com/Orange-Cyberdefense/CVE-repository/blob/master/PoCs/CVE_Jorani.py)|`env` (SUID)|
 |law|Intermediate||[GLPI htmlawed (CVE-2022-35914)](https://mayfly277.github.io/posts/GLPI-htmlawed-CVE-2022-35914/)|`pspy`, edit `cleanup.sh`|
 |Levram|Easy||[Gerapy 0.9.7 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50640)|`Python`
-| Snookums | Intermediate || [Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)| PwnKit|
-| Sorcerer  | Intermediate | Dirsearch| SSH, SCP| `start-stop-daemon` (SUID)|
-| Twiggy    | Intermediate | ZeroMQ ZMTP 2.0| [Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652) ||
-| Walla     | Intermediate | default creds| [RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)| `sudo -l`, replace python file|
-| Wombo     | Intermediate | Redis| [Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
-| ZenPhoto  | Intermediate | Dirsearch| [ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)| [rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904) |
+|Mzeeav|Easy|dirsearch|bypass upload shell|`fileS` (SUID)|
+|Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
+|Snookums|Intermediate||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)|PwnKit|
+|Sorcerer|Intermediate|Dirsearch| SSH, SCP|`start-stop-daemon` (SUID)|
+|Twiggy|Intermediate|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
+|Walla|Intermediate|default creds|[RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
+|Wombo|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)||
+|ZenPhoto|Intermediate|Dirsearch|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
 - [ ] [Apex]()
 - [ ] [BitForge]()
@@ -381,8 +383,6 @@ The most commonly used tools
 - [ ] [Lavita]()
 - [ ] [Mantis]()
 - [ ] [Marketing]()
-- [X] [Intermediate] Mzeeav
-- [X] [Nibbles]()
 - [ ] [Nukem]()
 - [X] [Ochima]()
 - [ ] [Payday]()
