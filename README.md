@@ -363,7 +363,8 @@ The most commonly used tools
 |Exfiltrated|Easy|default creds|[CVE-2018-19422-SubrionCMS-RCE](https://github.com/hev0x/CVE-2018-19422-SubrionCMS-RCE)|cron jobs, [Exploit for CVE-2021-22204 (ExifTool) - Arbitrary Code Execution](https://github.com/UNICORDev/exploit-CVE-2021-22204)|
 |Extplorer|Intermediate|dirsearch|upload reverse shell|`id`, `debugfs`, `john`|
 |Fanatastic|Hard||[CVE-2021-43798 Grafana Unauthorized arbitrary file reading vulnerability](https://github.com/jas502n/Grafana-CVE-2021-43798)|
-|Flu|Intermediate||[ CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
+|Fired|Hard||[Openfire Console Authentication Bypass Vulnerability with RCE plugin - CVE-2023-32315](https://github.com/miko550/CVE-2023-32315)
+|Flu|Intermediate||[CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
 |Hawat|Hard|dirsearsh|Sql injection, upload shell|
 |Hub|Easy||[FuguHub 8.4 Authenticated RCE](https://github.com/SanjinDedic/FuguHub-8.4-Authenticated-RCE-CVE-2024-27697)|
 |Image|Easy||[RCE vulnerability affecting ImageMagick 6.9.6-4 - CVE-2023-34152](https://github.com/SudoIndividual/CVE-2023-34152)|`strace` (SUID)|
@@ -390,7 +391,6 @@ The most commonly used tools
 - [ ] [BitForge]()
 - [ ] [Boolean]()
 - [ ] [Clue]()
-- [ ] [Fanatastic]()
 - [ ] [Fired]()
 - [ ] [Hetemit]()
 - [ ] [Hunit]()
