@@ -221,6 +221,12 @@ wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USER
 ```
 
 
+### debugfs
+list all 
+```
+df -h  
+debugfs PATH
+```
 
 ## Walkthrough Labs
 
@@ -356,6 +362,7 @@ The most commonly used tools
 |Crane|Easy||[CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940?tab=readme-ov-file)|`sudo -l`, serice|
 |Exfiltrated|Easy|default creds|[CVE-2018-19422-SubrionCMS-RCE](https://github.com/hev0x/CVE-2018-19422-SubrionCMS-RCE)|cron jobs, [Exploit for CVE-2021-22204 (ExifTool) - Arbitrary Code Execution](https://github.com/UNICORDev/exploit-CVE-2021-22204)|
 |Extplorer|Intermediate|dirsearch|upload reverse shell|`id`, `debugfs`, `john`|
+|Fanatastic|Hard||[CVE-2021-43798 Grafana Unauthorized arbitrary file reading vulnerability](https://github.com/jas502n/Grafana-CVE-2021-43798)|
 |Flu|Intermediate||[ CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
 |Hawat|Hard|dirsearsh|Sql injection, upload shell|
 |Hub|Easy||[FuguHub 8.4 Authenticated RCE](https://github.com/SanjinDedic/FuguHub-8.4-Authenticated-RCE-CVE-2024-27697)|
