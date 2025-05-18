@@ -344,7 +344,7 @@ The most commonly used tools
 - linPEAS
 - GTFOBins
 
-| Lab| Difficulty| Recon| Access| Privilege Escalation|
+|Lab| Difficulty| Recon| Access| Privilege Escalation|
 | -- | -- | -- | -- | -- |
 |Astronaut|Easy||[GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)| `PHP`(SUID)|
 |Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
@@ -365,6 +365,13 @@ The most commonly used tools
 |Levram|Easy||[Gerapy 0.9.7 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50640)|`Python`
 |Mzeeav|Easy|dirsearch|bypass upload shell|`fileS` (SUID)|
 |Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
+|Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s|
+|PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
+|Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
+|Press|Intermediate|default creds|[Flatpress 1.2.1 - File upload bypass to RCE](https://github.com/flatpressblog/flatpress/issues/152?source=post_page-----93c6d096bae6---------------------------------------)|apt-get (Sudo)|
+|pyLoader|Easy||[CVE-2023-0297](https://github.com/JacobEbben/CVE-2023-0297/blob/main/exploit.py)|
+|QuackerJack|Intermediate||[rConfig 3.9 - 'searchColumn' SQL Injection](https://www.exploit-db.com/exploits/48208), [rConfig 3.9.3 - Authenticated Remote Code Execution](https://www.exploit-db.com/exploits/47982)|`find` (SUID)|
+|RubyDome|Intermediate||[pdfkit v0.8.7.2 - Command Injection](https://www.exploit-db.com/exploits/51293)|`irb` (shell)
 |Snookums|Intermediate||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)|PwnKit|
 |Sorcerer|Intermediate|Dirsearch| SSH, SCP|`start-stop-daemon` (SUID)|
 |Twiggy|Intermediate|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
@@ -384,20 +391,13 @@ The most commonly used tools
 - [ ] [Mantis]()
 - [ ] [Marketing]()
 - [ ] [Nukem]()
-- [X] [Ochima]()
 - [ ] [Payday]()
-- [X] [PC]()
 - [ ] [Pebbles]()
-- [X] [Pelican]()
 - [ ] [Peppo]()
 - [ ] [Plum]()
 - [ ] [Postfish]()
-- [X] [Press]()
-- [X] [Easy] pyLoader ([writeup](/writeups/pyLoader.md))
-- [X] [Intermediate] QuackerJack ([writeup](/writeups/QuackerJack.md))
 - [ ] [Readys]()
 - [ ] [Roquefort]()
-- [X] [RubyDome]()
 - [ ] [Scrutiny]()
 - [ ] [SPX]()
 - [ ] [Sybaris]()
