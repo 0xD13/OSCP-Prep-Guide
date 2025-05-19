@@ -369,11 +369,12 @@ The most commonly used tools
 |Hub|Easy||[FuguHub 8.4 Authenticated RCE](https://github.com/SanjinDedic/FuguHub-8.4-Authenticated-RCE-CVE-2024-27697)|
 |Image|Easy||[RCE vulnerability affecting ImageMagick 6.9.6-4 - CVE-2023-34152](https://github.com/SudoIndividual/CVE-2023-34152)|`strace` (SUID)|
 |Jordak|Easy||[CVE-2023-26469](https://github.com/Orange-Cyberdefense/CVE-repository/blob/master/PoCs/CVE_Jorani.py)|`env` (SUID)|
+|Lavita|Hard|404 page|[Remote Code Execution: Laravel (CVE-2021-3129)](https://github.com/joshuavanderpoll/CVE-2021-3129)|`pspy`, edit `artisan`, `composer` (Sudo)
 |law|Intermediate||[GLPI htmlawed (CVE-2022-35914)](https://mayfly277.github.io/posts/GLPI-htmlawed-CVE-2022-35914/)|`pspy`, edit `cleanup.sh`|
 |Levram|Easy||[Gerapy 0.9.7 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50640)|`Python`
 |Mzeeav|Easy|dirsearch|bypass upload shell|`fileS` (SUID)|
 |Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
-|Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s|
+|Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s`|
 |PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
 |Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
 |Press|Intermediate|default creds|[Flatpress 1.2.1 - File upload bypass to RCE](https://github.com/flatpressblog/flatpress/issues/152?source=post_page-----93c6d096bae6---------------------------------------)|apt-get (Sudo)|
@@ -391,10 +392,9 @@ The most commonly used tools
 - [ ] [BitForge]()
 - [ ] [Boolean]()
 - [ ] [Clue]()
-
 - [ ] [Hetemit]()
 - [ ] [Hunit]()
-- [ ] [Lavita]()
+
 - [ ] [Mantis]()
 - [ ] [Marketing]()
 - [ ] [Nukem]()
