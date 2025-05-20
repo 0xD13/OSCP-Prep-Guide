@@ -380,9 +380,10 @@ The most commonly used tools
 |Nukem|Hard||[WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48979)|manually examining, `dosbox` (SUID)|
 |Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s`|
 |PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
-|Pebbles|Easy|DirBuster
+|Pebbles|Easy|DirBuster|!!! not finish 
 |Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
 |Peppo|Hard|[ident (p113)](https://book.hacktricks.wiki/en/network-services-pentesting/113-pentesting-ident.html#ident-user-enum)|Hydra, Check `PATH`|[`ed` (Shell)](https://gtfobins.github.io/gtfobins/ed/#shell), [`docker` (SUID)](https://gtfobins.github.io/gtfobins/docker/#suid)|
+|Plum|Intermediate||[PluXml 5.8.7 RCE](https://github.com/erlaplante/pluxml-rce)|manually examining|
 |Press|Intermediate|default creds|[Flatpress 1.2.1 - File upload bypass to RCE](https://github.com/flatpressblog/flatpress/issues/152?source=post_page-----93c6d096bae6---------------------------------------)|apt-get (Sudo)|
 |pyLoader|Easy||[CVE-2023-0297](https://github.com/JacobEbben/CVE-2023-0297/blob/main/exploit.py)|
 |QuackerJack|Intermediate||[rConfig 3.9 - 'searchColumn' SQL Injection](https://www.exploit-db.com/exploits/48208), [rConfig 3.9.3 - Authenticated Remote Code Execution](https://www.exploit-db.com/exploits/47982)|`find` (SUID)|
