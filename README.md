@@ -86,6 +86,9 @@ a tool for enumerating information from Windows and Samba systems
 #### [smbclient](https://www.samba.org/samba/docs/4.17/man-html/smbclient.1.html)
 ```shell
 smbclient -L DOMAIN --user USER
+
+smbclient -L //10.211.11.10 -N
+smbclient //10.211.11.10/SharedFiles -N
 ```
 
 #### [Nikto](https://github.com/sullo/nikto)
@@ -353,7 +356,7 @@ The most commonly used tools
 - linPEAS
 - GTFOBins
 
-|Lab| Difficulty| Recon| Access| Privilege Escalation|
+|Lab| Difficulty| Recon| Foothold| Privilege Escalation|
 | -- | -- | -- | -- | -- |
 |Astronaut|Easy||[GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)| `PHP`(SUID)|
 |Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
@@ -390,8 +393,10 @@ The most commonly used tools
 |RubyDome|Intermediate||[pdfkit v0.8.7.2 - Command Injection](https://www.exploit-db.com/exploits/51293)|`irb` (shell)
 |Snookums|Intermediate||[Remote File Inclusion](https://github.com/beauknowstech/SimplePHPGal-RCE.py)|PwnKit|
 |Sorcerer|Intermediate|DirBuster| SSH, SCP|`start-stop-daemon` (SUID)|
+|Sybaris|Hard|FTP, Redis|[RedisModules-ExecuteCommand](https://book.hacktricks.wiki/en/network-services-pentesting/6379-pentesting-redis.html#load-redis-module)|
 |Twiggy|Intermediate|ZeroMQ ZMTP 2.0|[Saltstack 3000.1 - CVE-2020-11651, CVE-2020-11652](https://github.com/Al1ex/CVE-2020-11652)||
 |Walla|Intermediate|default creds|[RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
+|WallpaperHub|Hard||LFI|CVE-2024-51757
 |Wombo|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)||
 |ZenPhoto|Intermediate|DirBuster|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
@@ -405,8 +410,6 @@ The most commonly used tools
 - [ ] [Marketing]()
 - [ ] [Payday]()
 - [ ] [Pebbles]()
-
-- [ ] [Plum]()
 - [ ] [Postfish]()
 - [ ] [Readys]()
 - [ ] [Roquefort]()
@@ -414,7 +417,6 @@ The most commonly used tools
 - [ ] [SPX]()
 - [ ] [Sybaris]()
 - [ ] [Vmdak]()
-- [ ] [WallpaperHub]()
 - [ ] [Xposedapi]()
 - [ ] [Zab]()
 - [ ] [Zipper]()
