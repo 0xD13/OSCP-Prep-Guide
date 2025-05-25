@@ -378,6 +378,7 @@ The most commonly used tools
 |Bratarina|Easy| OpenSMTPD|[OpenSMTPD 6.6.1 - Remote Code Execution](https://www.exploit-db.com/exploits/47984)||
 |Bullybox|Intermediate|[git-dumper](https://github.com/arthaud/git-dumper#git-dumper) | [BoxBilling<=4.22.1.5 - Remote Code Execution (RCE)](https://www.exploit-db.com/exploits/51108)|`sudo`|
 |ClamAV|Easy||[Sendmail with clamav-milter < 0.91.2 - Remote Command Execution](https://www.exploit-db.com/exploits/4761)
+|Clue|Hard||[Cassandra Web 0.5.0 - Remote File Read](https://www.exploit-db.com/exploits/49362), [FreeSWITCH 1.10.1 - Command Execution](https://www.exploit-db.com/exploits/47799)|another user, id_rsa
 |Cockpit|Intermediate||SQL Injection|`tar` (SUID), edit `etc/sudoers`|
 |Codo|Easy||upload reverse shell|root's password leaked (linPEAS)|
 |Crane|Easy||[CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940?tab=readme-ov-file)|`sudo -l`, serice|
@@ -417,7 +418,6 @@ The most commonly used tools
 |Zab|Hard|||MySql, hashcat, ligolo-ng, zabbix commnad shell, `rsync` (Sudo)|
 |ZenPhoto|Intermediate|DirBuster|[ZenPhoto 1.4.1.4 RCE - CVE-2011-4825](https://www.exploit-db.com/exploits/18083)|[rds - CVE-2010-3904](https://github.com/SecWiki/linux-kernel-exploits/tree/master/2010/CVE-2010-3904)|
 
-- [ ] [Clue]()
 - [ ] [Hetemit]()
 - [ ] [Hunit]()
 - [ ] [Mantis]()
